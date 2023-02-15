@@ -24,4 +24,11 @@ public class ConnectionPool {
         this.properties = properties;
     }
 
+    private void init() {
+        System.out.println("Init connection pool");
+    }
+
+    private void destroy() {
+        System.out.println("Clean connection pool");
+    }
 }
