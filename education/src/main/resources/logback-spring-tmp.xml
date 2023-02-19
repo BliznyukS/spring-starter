@@ -1,3 +1,4 @@
+<!--Remove -tmp from name to use this settings-->
 <configuration>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">

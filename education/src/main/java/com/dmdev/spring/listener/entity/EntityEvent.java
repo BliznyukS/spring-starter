@@ -13,8 +13,4 @@ public class EntityEvent extends EventObject {
         super(entity);
         this.accessType = accessType;
     }
-
-//    public AccessType getAccessType() {
-//        return accessType;
-//    }
 }
