@@ -1,15 +1,20 @@
 package com.dmdev.spring.service;
 
+import com.dmdev.spring.bpp.Transaction;
 import com.dmdev.spring.database.entity.Company;
 import com.dmdev.spring.database.repository.CrudRepository;
 import com.dmdev.spring.dto.CompanyReadDto;
+import com.dmdev.spring.integration.annotation.IT;
 import com.dmdev.spring.listener.entity.EntityEvent;
+import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import java.util.Collections;
 import java.util.Optional;
@@ -19,6 +24,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
+@IT
+@RequiredArgsConstructor
 @ExtendWith(MockitoExtension.class)
 class CompanyServiceTest {
 
